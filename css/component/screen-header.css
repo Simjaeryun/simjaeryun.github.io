@@ -1,0 +1,48 @@
+.screen_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--horizontal-space);
+  margin-bottom: 15px;
+}
+
+.screen_header_title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.screen_header_icons span {
+  margin-left: 25px;
+}
+
+.friends_screen {
+  padding: 0px var(--horizontal-space);
+}
+
+.screen_header_icons span {
+  position: relative;
+}
+
+.find_add_notification {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: tomato;
+  right: -7px;
+  top: -8px;
+}
+
+@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen_header_icons .fa-cog:hover {
+  will-change: transform;
+  animation: rotateCog 1s linear infinite;
+}

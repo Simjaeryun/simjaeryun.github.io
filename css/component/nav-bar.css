@@ -1,0 +1,74 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  border-top: 1px solid rgba(121, 121, 121, 0.5);
+}
+
+.nav_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_link {
+  color: #2e363e;
+  position: relative;
+}
+
+.nav_comment_notification {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  animation: noticeAnimation 2.5s ease-in-out infinite;
+}
+
+.nav_add_notification {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: tomato;
+  right: -5px;
+}
+
+@keyframes noticeAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px) rotateY(360deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes appearBtnAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.nav_btn {
+  animation: appearBtnAnimation 0.5s ease-in-out forwards;
+  transform: translateY(80px);
+  opacity: 0;
+}
+
+.nav_btn:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.nav_btn:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.nav_btn:last-child {
+  animation-delay: 0.8s;
+}
